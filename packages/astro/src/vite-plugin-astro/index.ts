@@ -264,7 +264,7 @@ export default function astro({ settings, logger }: AstroPluginOptions): vite.Pl
 						return;
 					}
 
-					const filename = normalizePath(parsedId.filename);
+					const filename = normalizePath(normalizeFilename(parsedId.filename, config.root));
 
 					// If an Astro component is imported in code used on the client, we return an empty
 					// module so that Vite doesn’t bundle the server-side Astro code for the client.

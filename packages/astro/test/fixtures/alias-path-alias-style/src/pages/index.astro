@@ -1,0 +1,13 @@
+---
+// Import component using path alias - this triggers the bug
+import StyledComponent from '@/components/StyledComponent.astro';
+---
+<html>
+  <head>
+    <title>Path Alias Style Test</title>
+  </head>
+  <body>
+    <h1>Path Alias Style Test</h1>
+    <StyledComponent />
+  </body>
+</html>
